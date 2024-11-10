@@ -1,23 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novolean.wtf</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background-color: black; /* Set a background color */
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1e1e1e; 
+            font-family: 'Poppins', sans-serif;
         }
-        img {
-            max-width: 100%;
-            max-height: 100%;
+        .notification-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #32cd32; 
+            color: #fff;
+            padding: 5px 20px; 
+            text-align: center;
+            font-size: 16px;
+            z-index: 1000; 
+            box-sizing: border-box;
+        }
+
+        .notification-bar a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px; 
+            top: 5px;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 60px; 
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 340px; 
+            height: 199px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 12px 6px rgba(50, 205, 50, 0.5); 
+        }
+
+        .button h2 {
+            color: #32cd32;
+            font-size: 24px;
+            margin: 0;
+            text-shadow: 0px 0px 8px rgba(50, 205, 50, 0.8);
+            font-weight: 600;
+        }
+
+        .button p {
+            color: #ffffff;
+            font-size: 14px;
+            margin: 5px 0 0;
+            text-shadow: 1px 6px 5px #000000, 0 0 25px #000000, 0 0 5px #000000; 
+            font-weight: 400;
+        }
+
+        .button-1 { background-image: url('images/button1.png'); }
+        .button-2 { background-image: url('images/button7.png'); }
+        .button-3 { background-image: url('images/button2.png'); }
+        .button-4 { background-image: url('images/button3.png'); }
+        .button-5 { background-image: url('images/button4.png'); }
+        .button-6 { background-image: url('images/button5.png'); }
+        .button-7 { background-image: url('images/button6.png'); }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #32cd32; 
+            text-decoration: underline;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <img src="nuser.gif" alt="Novoline GIF">
+
+<div class="notification-bar">
+    DM ME VIA DISCORD: <a href="novolean.wtf" target="_blank">L175_</a> for questions.
+    <button class="close-btn" onclick="document.querySelector('.notification-bar').style.display='none'">x</button>
+</div>
+
+<div class="button-container">
+    <a href="sources.html" class="button button-1">
+        <h2>Sources</h2>
+        <p>novoline/tenacity etc.<br>eclipse/intellij ready<br>& C++/C#/Rust ghost/blatant clients</p>
+    </a>
+    <a href="blatant.html" class="button button-2">
+        <h2>Blatant</h2>
+        <p>Every Blatant Client you need</p>
+    </a>
+    <a href="ghost-clients.html" class="button button-3">
+        <h2>Ghost Clients</h2>
+        <p>Internal/External & more</p>
+    </a>
+    <a href="1.9+.html" class="button button-4">
+        <h2>1.9+</h2>
+        <p>Ghost/Blatant for newer versions</p>
+    </a>
+    <a href="ape-with-v.html" class="button button-5">
+        <h2>Ape with V</h2>
+        <p>v3 & v4 and more</p>
+    </a>
+    <a href="security-notice.html" class="button button-6">
+        <h2>Security Notice</h2>
+        <p>Everything here is tested and proven to be safe. If something is not secure it will be mentioned.</p>
+    </a>
+    <a href="advertise.html" class="button button-7">
+        <h2>Advertise</h2>
+        <p>Advertise your Client/Alts on this website for cheap prices.</p>
+    </a>
+</div>
+
+<div class="footer">
+    <p>Credit <a href="https://novolean.wtf" target="_blank">NOVOLEAN.WTF</a> | <a href="takedown.html">TAKEDOWN NOTICE</a></p>
+</div>
+
 </body>
 </html>
