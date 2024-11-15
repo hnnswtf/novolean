@@ -182,17 +182,59 @@
         .footer a:hover {
             text-decoration: underline;
         }
+
+        .red-text {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.animated-gradient-text {
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, white);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s infinite, glow-effect 1.5s infinite;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px white;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glow-effect {
+    0% {
+        text-shadow: 0 0 5px red, 0 0 10px white;
+    }
+    50% {
+        text-shadow: 0 0 20px white, 0 0 30px red;
+    }
+    100% {
+        text-shadow: 0 0 10px red, 0 0 20px white;
+    }
+}
+
     </style>
 </head>
 <body>
 
-<!-- Notification Bar -->
+<!-- bar -->
 <div class="notification-bar">
     Use <a href="https://bypass.city" target="_blank">bypass.city</a> to bypass Linkvertise 60 min waiting time.
     <button class="close-btn" onclick="document.querySelector('.notification-bar').style.display='none'">x</button>
 </div>
 
-<!-- Button Container -->
+<!-- container -->
 <div class="button-container">
     <a href="javascript:void(0)" class="button" style="background-image: url('images/sbutton1.png');" onclick="showClientContent('client1')">
         <h2>Tenacity 5.0/6.0</h2>
@@ -205,6 +247,18 @@
     <a href="javascript:void(0)" class="button" style="background-image: url('images/extralol.png');" onclick="showClientContent('client12')">
         <h2>Novoline.lol 6.97 (almost fully deobf)</h2>
         <p>Almost latest Novoline.lol version</p>
+    </a>
+    <a href="javascript:void(0)" class="button" style="background-image: url('images/exhi.png');" onclick="showClientContent('client13')">
+        <h2>Exhibition</h2>
+        <p>Intellij/Eclipse Ready | One of the best clients in 2021  | Version 1.8.9</p>
+    </a>
+    <a href="javascript:void(0)" class="button" style="background-image: url('images/exhi.png');" onclick="showClientContent('client14')">
+        <h2>Exhibition FORGE!?</h2>
+        <p>Intellij/Eclipse Ready (Gradlew) | Found this on Github, not checked for rats | Version 1.8.9</p>
+    </a>
+    <a href="javascript:void(0)" class="button" style="background-image: url('images/sigma.png');" onclick="showClientContent('client15')">
+        <h2>Sigma 5</h2>
+        <p>Intellij/Eclipse Ready  | (Not fully deobfuscated, updated constantly tho)| Version 1.8.9</p>
     </a>
     <a href="javascript:void(0)" class="button" style="background-image: url('images/sbutton3.png');" onclick="showClientContent('client3')">
         <h2>Dope v2</h2>
@@ -244,7 +298,7 @@
     </a>
 </div>
 
-<!-- Client Content Sections -->
+<!-- content thingss -->
 <div id="client1" class="client-content">
     <button class="back-btn" onclick="closeClientContent()">Back</button>
     <h2>Tenacity 5.0/6.0 Details</h2>
@@ -271,7 +325,7 @@
 
 <div id="client12" class="client-content">
     <button class="back-btn" onclick="closeClientContent()">Back</button>
-    <h2>Dope v2 Details</h2>
+    <h2>Novoline.lol Details</h2>
     <img src="sourceimages/nlol_1.png" alt="Novoline Image 1">
     <img src="sourceimages/nlol_2.png" alt="Novoline Image 2">
     <img src="sourceimages/nlol_3.png" alt="Novoline Image 3">
@@ -279,6 +333,44 @@
     <p></p>
     <a href="https://link-center.net/361790/novolinelol-source" target="_blank">Download Novoline.lol Source (almost fully deobf)</a>
     <a href="https://link-center.net/361790/novolinelol-source" target="_blank">Download Config</a>
+</div>
+
+<div id="client13" class="client-content">
+    <button class="back-btn" onclick="closeClientContent()">Back</button>
+    <h2>Exhibition Details</h2>
+    <img src="sourceimages/ex_1.png" alt="Exhi Image 1">
+    <img src="sourceimages/ex_2.png" alt="Exhi Image 2">
+    <img src="sourceimages/ex_3.png" alt="Exhi Image 3">
+    <p><span class="animated-gradient-text">Unchecked for rats! CHECK SOURCE YOURSELF.</span></p>
+    <p>One of the best clients in 2021, ready to build</p>
+    <p></p>
+    <a href="https://link-center.net/361790/exhibition-client-src-rdy" target="_blank">Download Exhibition Source (unchecked)</a>
+    <a href="https://link-center.net/361790/exhibition-client-src-rdy" target="_blank">Download Config</a>
+</div>
+
+<div id="client14" class="client-content">
+    <button class="back-btn" onclick="closeClientContent()">Back</button>
+    <h2>Exhibition Details</h2>
+    <img src="sourceimages/ex_1.png" alt="Exhi Image 1">
+    <img src="sourceimages/ex_2.png" alt="Exhi Image 2">
+    <img src="sourceimages/ex_3.png" alt="Exhi Image 3">
+    <p><span class="animated-gradient-text">Unchecked for rats! CHECK SOURCE YOURSELF.</span></p>
+    <p>Random Forge Version I found on Github, didn’t try</p>
+
+    <p></p>
+    <a href="https://link-center.net/361790/exhibition-src-forge-what" target="_blank">Download Exhibition Source Forge!? (unchecked)</a>
+    <a href="https://link-center.net/361790/exhibition-src-forge-what" target="_blank">Download Config</a>
+</div>
+<div id="client15" class="client-content">
+    <button class="back-btn" onclick="closeClientContent()">Back</button>
+    <h2>Sigma 5 Details</h2>
+    <img src="sourceimages/s_1.png" alt="Sigma Image 1">
+    <img src="sourceimages/s_2.png" alt="Sigma Image 2">
+    <img src="sourceimages/s_3.png" alt="Sigma Image 3">
+    <p>Sigma 5 Remap Project, full buildable Source (not fully deobf), music player fixed & more</p>
+    <p></p>
+    <a href="https://link-center.net/361790/sigma-5-src-rdy" target="_blank">Download Sigma 5 Source</a>
+    <a href="https://link-center.net/361790/sigma-5-src-rdy" target="_blank">Download Config</a>
 </div>
 
 <div id="client3" class="client-content">
@@ -311,11 +403,13 @@
     <img src="sourceimages/slack_1.png" alt="Slack Image 1">
     <img src="sourceimages/slack_2.png" alt="Slack Image 2">
     <img src="sourceimages/slack_3.png" alt="Slack Image 3">
+    <p><span class="animated-gradient-text">Maintained by FDP dev & dev might be involved in ratting the old paid version.</span></p>
     <p>Decent Hypixel & Multiserver bypasses, most likely skidded & font renderer from liquidbounce.</p>
-    <p>Probably bad code & perfomance as the devs dont really know what their doing</p>
+    <p>Probably bad code & performance as the devs don’t really know what they're doing</p>
     <a href="https://lootdest.org/s?f8c1edcc" target="_blank">Download Slack Source</a>
     <a href="https://lootdest.org/s?f8c1edcc" target="_blank">Download Config</a>
 </div>
+
 
 <div id="client6" class="client-content">
     <button class="back-btn" onclick="closeClientContent()">Back</button>
@@ -359,7 +453,7 @@
     <img src="sourceimages/rp_1.png" alt="rp Image 1">
     <img src="sourceimages/rp_2.png" alt="rp Image 2">
     <img src="sourceimages/rp_3.png" alt="rp Image 3">
-    <p>The best free open source Ghost client, written in C++.Lunar, Badlion, Forge, Vanilla & more to come</p>
+    <p>The best free open source Ghost client, written in C++. Lunar, Badlion, Forge, Vanilla & more to come</p>
     <p>Also has some nice features you dont see anywhere else.</p>
     <a href="https://direct-link.net/361790/ripterms-ghost-client-vsc" target="_blank">Download Ripterms Ghost Source</a>
     <a href="https://discord.gg/yJnfe7MFQD" target="_blank">Download Config</a>
@@ -371,7 +465,7 @@
     <img src="sourceimages/raid_2.png" alt="raid Image 2">
     <img src="sourceimages/raid_3.png" alt="raid Image 3">
     <p>Skidded, but good Visuals and nice features. Bad code base since it was a dev version</p>
-    <p>Also clean backtrack even tho its kind of a disadvantage. You have to go on the Github account to find the source.</p>
+    <p>Also clean backtrack even tho its kind of a disadvantage.</p>
     <a href="https://link-hub.net/361790/raid0-client-source-code" target="_blank">Download Raid0 Ghost Source</a>
     <a href="https://link-hub.net/361790/raid0-client-source-code" target="_blank">Download Config</a>
 </div>
